@@ -1,0 +1,220 @@
+HOSTELERS
+
+AUTHENTICATION
+	REQUEST
+		METHOD POST
+			user_id, password
+	RESPONCE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			access_token- aersdtfyguhijokjihugytfr
+			user_id
+
+STUDENT INFO
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			user_id
+			user_type
+			gender
+			name
+			branch
+			course
+			section
+			hostel
+			room
+			wing				//wing of the hostel opted for
+			img
+			email				//email address of the user
+			phone 				//active phone number
+
+OPT WING
+	REQUEST
+		METHOD POST
+			user_id,access_token,wing				//wing of the hostel opted for
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			wing				//wing of the hostel opted for			
+
+CHECK DAY OUTING STATUS
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONCE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			outing_status- 
+							0 no request
+							1 requested/accepted
+							2 outing
+									for 1
+										pass_id				//unique id of the outing pass
+										place				//place of visit
+										purpose				//purpose of visit
+										going_with				//going with who? friend/family/official/alone
+										date_of_apply				//date of applying for the pass
+										time_of_apply				//time of applying for the pass
+										last_time_in				//last time of the day after which action can be taken for being late
+										QRhash				//unique random string for QR/OTP identification
+									for 2
+										pass_id				//unique id of the outing pass
+										place				//place of visit
+										purpose				//purpose of visit
+										going_with				//going with who? friend/family/official/alone
+										date_of_apply				//date of applying for the pass
+										time_of_apply				//time of applying for the pass
+										date_of_out				//date of going out
+										time_of_out				//time of going out
+										last_time_in				//last time of the day after which action can be taken for being late
+										sec_out_id				//id of security that allowed individual out
+										QRhash				//unique random string for QR/OTP identification
+
+CHECK LEAVE STATUS
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONCE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			leave_status- 
+							0 no request
+							1 requested
+							2 accepted
+							3 outing
+									for 1
+										pass_id				//unique id of the outing pass
+										place				//place of visit
+										purpose				//purpose of visit
+										date_of_apply				//date of applying for the pass
+										time_of_apply				//time of applying for the pass
+										date_exp_out				//expected date of going out
+										time_exp_out				//expected time of going out
+										date_exp_in				//expected date of coming back
+										parent_no				//contact number of parent
+										phone_no				//contact number of self
+										wing				//wing of the hostel opted for
+									for 2
+										pass_id				//unique id of the outing pass
+										place				//place of visit
+										purpose				//purpose of visit
+										date_of_apply				//date of applying for the pass
+										time_of_apply				//time of applying for the pass
+										date_exp_out				//expected date of going out
+										time_exp_out				//expected time of going out
+										date_exp_in				//expected date of coming back
+										parent_no				//contact number of parent
+										phone_no				//contact number of self
+										ward_app_id				//id of warden who approved the hosteller for outing
+										wing				//wing of the hostel opted for
+										QRhash				//unique random string for QR/OTP identification
+										remarks				//remarks given by warden after approval
+									for 3
+										pass_id				//unique id of the outing pass
+										place				//place of visit
+										purpose				//purpose of visit
+										date_of_apply				//date of applying for the pass
+										time_of_apply				//time of applying for the pass
+										date_exp_out				//expected date of going out
+										time_exp_out				//expected time of going out
+										date_exp_in				//expected date of coming back
+										date_out				//actual date going out
+										time_out                //actual time going out
+										parent_no				//contact number of parent
+										phone_no				//contact number of self
+										ward_app_id				//id of warden who approved the hosteller for outing
+										sec_out_id				//id of security that allowed individual out
+										QRhash				//unique random string for QR/OTP identification
+										remarks				//remarks given by warden after approval
+
+MAKE DAYOUT REQUEST
+	REQUEST
+		METHOD POST
+			user_id,access_token,place,purpose,going_with,phone_no
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			pass_id				//unique id of the outing pass
+			place				//place of visit
+			purpose				//purpose of visit
+			going_with				//going with who? friend/family/official/alone
+			phone_no				//contact number of self
+			date_of_apply				//date of applying for the pass
+			time_of_apply				//time of applying for the pass
+			last_time_in				//last time of the day after which action can be taken for being late
+			QRhash				//unique random string for QR/OTP identification
+
+MAKE LEAVE REQUEST
+	REQUEST
+		METHOD POST
+			user_id,access_token,place,purpose,going_with,date_exp_out,date_exp_in,time_exp_out,phone_no,parent_no
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			pass_id				//unique id of the outing pass
+			place				//place of visit
+			purpose				//purpose of visit
+			date_of_apply				//date of applying for the pass
+			time_of_apply				//time of applying for the pass
+			last_time_in				//last time of the day after which action can be taken for being late
+			QRhash				//unique random string for QR/OTP identification
+			date_exp_out				//expected date of going out
+			date_exp_in				//expected date of coming back
+			time_exp_out				//expected time of going out
+			wing				//wing of the hostel opted for
+
+CANCEL DAYOUT/LEAVE REQUEST
+	REQUEST
+		METHOD POST
+			user_id,access_token				//unique id of the outing pass
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			pass_id				//unique id of the outing pass
+			place				//place of visit
+			purpose				//purpose of visit
+			date_of_apply				//date of applying for the pass
+			time_of_apply				//time of applying for the pass
+
+GET OUTING HISTORY
+	REQUEST
+		METHOD POST
+			user_id, access_token,outing_type
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			leave_list
+						pass_id				//unique id of the outing pass
+						place				//place of visit
+						purpose				//purpose of visit
+						date_of_apply				//date of applying for the pass
+						time_of_apply				//time of applying for the pass
+						date_exp_out				//expected date of going out
+						time_exp_out				//expected time of going out
+						date_exp_in				//expected date of coming back
+						date_out				//actual date going out
+						time_out                //actual time going out
+						date_in                //actual date coming back
+						time_in                //actual time coming back
+						parent_no				//contact number of parent
+						ward_app_id				//id of warden who approved the hosteller for outing
+						sec_out_id				//id of security that allowed individual out
+						sec_in_id				//id of security that allowed individual in
+						remarks				//remarks given by warden after approval
+						status              //late or not
+			dayout_list
+						pass_id				//unique id of the outing pass
+						place				//place of visit
+						purpose				//purpose of visit
+						date_of_apply				//date of applying for the pass
+						time_of_apply				//time of applying for the pass
+						date_out				//actual date going out
+						time_out                //actual time going out
+						date_in                //actual date coming back
+						time_in                //actual time coming back
+						sec_out_id				//id of security that allowed individual out
+						sec_in_id				//id of security that allowed individual in
+						status              //late or not			

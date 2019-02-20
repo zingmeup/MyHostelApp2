@@ -1,0 +1,189 @@
+WARDEN
+
+AUTHENTICATION
+	REQUEST
+		METHOD POST
+			user_id, password
+	RESPONCE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			access_token- aersdtfyguhijokjihugytfr
+			user_id
+
+WARDEN INFO
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			user_id				//id of the hosteler
+			name				//name of the hosteler
+			user_type
+			gender
+			hostel				//hostel of the hosteler
+			room				//room of the hosteler
+			wing				//wing of the hostel opted for
+			img
+			email				//email address of the user
+			phone 				//active phone number
+
+OPT WING
+	REQUEST
+		METHOD POST
+			user_id,access_token,wing				//wing of the hostel opted for
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			wing				//wing of the hostel opted for			
+
+HOSTEL INFO
+	REQUEST
+		METHOD POST
+			user_id,access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			total_hostelers				//total number of hostelers in the hostel
+			on_dayout_req				//total number of hostelers on dayout req but in the campus
+			on_dayout				//total number of hostelers on dayout
+			on_leave_req				//total number of hostelers on leave aproved but in the campus
+			on_leave				//total number of hostelers on leave
+
+CURRENT DAYOUT LIST
+	REQUEST
+		METHOD POST
+			user_id,access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			dayout_list
+				pass_id				//unique id of the outing pass
+				img					//url of hosteler image
+				user_id				//id of the hosteler
+				name				//name of the hosteler
+				hostel				//hostel of the hosteler
+				room				//room of the hosteler
+				wing				//wing of the hostel opted for
+				place				//place of visit
+				purpose				//purpose of visit
+				going_with			//going with who? friend/family/official/alone
+				date_out				//actual date going out
+				time_out                //actual time going out
+				sec_out_id				//id of security that allowed individual out
+
+CURRENT LEAVE LIST
+	REQUEST
+		METHOD POST
+			user_id,access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+				leave_list
+					pass_id				//unique id of the outing pass
+					img					//url of hosteler image
+					user_id				//id of the hosteler
+					name				//name of the hosteler
+					hostel				//hostel of the hosteler
+					room				//room of the hosteler
+					wing				//wing of the hostel opted for
+					place				//place of visit
+					purpose				//purpose of visit
+					date_exp_in				//expected date of coming back
+					date_out				//actual date going out
+					time_out                //actual time going out
+					parent_no				//contact number of parent
+					ward_app_id				//id of warden who approved the hosteller for outing
+					sec_out_id				//id of security that allowed individual out
+					remarks				//remarks given by warden after approval
+
+LEAVE REQUEST LIST
+	REQUEST
+		METHOD POST
+			user_id,access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			leave_list
+				pass_id				//unique id of the outing pass
+				img					//url of hosteler image
+				user_id				//id of the hosteler
+				name				//name of the hosteler
+				hostel				//hostel of the hosteler
+				room				//room of the hosteler
+				wing				//wing of the hostel opted for
+				place				//place of visit
+				purpose				//purpose of visit
+				date_of_apply				//date of applying for the pass
+				time_of_apply				//time of applying for the pass
+				date_exp_out				//expected date of going out
+				time_exp_out				//expected time of going out
+				date_exp_in				//expected date of coming back
+				parent_no				//contact number of parent
+
+LEAVE REQUEST RESPONSE
+	REQUEST
+		METHOD POST
+			user_id,access_token,pass_id,parent_no,remarks,response
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			response- accepted/rejected
+			pass_id				//unique id of the outing pass
+			img					//url of hosteler image
+			user_id				//id of the hosteler
+			name				//name of the hosteler
+
+GET OUTING HISTORY
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			leave_list
+						pass_id				//unique id of the outing pass
+						img					//url of hosteler image
+						user_id				//id of the hosteler
+						name				//name of the hosteler
+						hostel				//hostel of the hosteler
+						room				//room of the hosteler
+						wing				//wing of the hostel opted for
+						place				//place of visit
+						purpose				//purpose of visit
+						date_of_apply				//date of applying for the pass
+						time_of_apply				//time of applying for the pass
+						date_exp_out				//expected date of going out
+						time_exp_out				//expected time of going out
+						date_exp_in				//expected date of coming back
+						date_out				//actual date going out
+						time_out                //actual time going out
+						date_in                //actual date coming back
+						time_in                //actual time coming back
+						parent_no				//contact number of parent
+						ward_app_id				//id of warden who approved the hosteller for outing
+						sec_out_id				//id of security that allowed individual out
+						sec_in_id				//id of security that allowed individual in
+						remarks				//remarks given by warden after approval
+						status              //late or not
+			dayout_list
+						
+						pass_id				//unique id of the outing pass
+						img					//url of hosteler image
+						user_id				//id of the hosteler
+						name				//name of the hosteler
+						hostel				//hostel of the hosteler
+						room				//room of the hosteler
+						wing				//wing of the hostel opted for
+						place				//place of visit
+						purpose				//purpose of visit
+						going_with			//going with who? friend/family/official/alone
+						date_of_apply				//date of applying for the pass
+						time_of_apply				//time of applying for the pass
+						date_out				//actual date going out
+						time_out                //actual time going out
+						date_in                //actual date coming back
+						time_in                //actual time coming back
+						sec_out_id				//id of security that allowed individual out
+						sec_in_id				//id of security that allowed individual in
+						status              //late or not			

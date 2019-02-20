@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dayout_swiperefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="6dp"
+                android:text="Not so long description.." />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/dayout_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="#fff"
+                    android:hint="Place">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="32"
+                        android:id="@+id/dayout_place"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="#fff"
+                    android:hint="Purpose">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:singleLine="true"
+                        android:maxLines="1"
+                        android:lines="1"
+                        android:maxLength="32"
+                        android:id="@+id/dayout_purpose"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/dayout_goingwith"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:entries="@array/going_with"
+                        android:padding="3dp"></Spinner>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:background="#fff"
+                        android:hint="Place">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:lines="1"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:id="@+id/dayout_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/dayout_make_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/shape_button_primary"
+                    android:text="Request"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <include
+            android:id="@+id/outing_card"
+            layout="@layout/already_outing" />
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:gravity="center"
+            android:text="Swipe Down to Refresh"
+            android:textColor="#565656" />
+        <ProgressBar
+            android:id="@+id/dayout_progress"
+            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateBehavior="cycle"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_gravity="bottom"
+            android:indeterminate="true"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

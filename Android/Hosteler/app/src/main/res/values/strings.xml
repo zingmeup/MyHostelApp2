@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Hosteler</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="welcome_message">Sed ut perspiciatis unde omnis iste natus erro  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam</string>
+    <string-array name="going_with">
+        <item>I\'m going with</item>
+        <item>Alone</item>
+        <item>Friends</item>
+        <item>Family</item>
+    </string-array>
+</resources>

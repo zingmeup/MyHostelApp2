@@ -1,0 +1,97 @@
+SECURITY
+
+AUTHENTICATION
+	REQUEST
+		METHOD POST
+			user_id, password
+	RESPONCE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			access_token- aersdtfyguhijokjihugytfr
+			user_id
+
+SECURITY INFO
+	REQUEST
+		METHOD POST
+			user_id, access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			user_id				//id of the hosteler
+			name				//name of the hosteler
+			img
+			email				//email address of the user
+			phone 				//active phone number
+
+STATS
+	REQUEST
+		METHOD POST
+			user_id,access_token
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			no_outside
+			no_dayout_req
+			no_leave_req
+			no_on_leave
+			no_on_dayout
+
+SCAN/INPUT
+	REQUEST
+		METHOD
+			user_id,access_token,QRhash/OTP/UID/pass_id
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			status 0 no request
+				   1 requested
+				   2 approved
+				   3 outing
+				   			for 0
+				   				message "You do not have any request/passes for going out"
+				   			for 1
+				   				message "Your warden has not accepted your request, contact warden"
+				   			for 2
+				   				pass_id				//unique id of the outing pass
+								img					//url of hosteler image
+								user_id				//id of the hosteler
+								name				//name of the hosteler
+								hostel				//hostel of the hosteler
+								place				//place of visit
+								purpose				//purpose of visit
+								going_with			//going with who? friend/family/official/alone
+								date_of_apply				//date of applying for the pass
+								time_of_apply				//time of applying for the pass
+								date_exp_out				//expected date of going out
+								time_exp_out				//expected time of going out
+								ward_app_id				//id of warden who approved the hosteller for outing
+							for 3
+								pass_id				//unique id of the outing pass
+								img					//url of hosteler image
+								user_id				//id of the hosteler
+								name				//name of the hosteler
+								hostel				//hostel of the hosteler
+								place				//place of visit
+								purpose				//purpose of visit
+								going_with			//going with who? friend/family/official/alone
+								date_of_apply				//date of applying for the pass
+								time_of_apply				//time of applying for the pass
+								date_exp_out				//expected date of going out
+								time_exp_out				//expected time of going out
+								date_exp_in				//expected date of coming back
+								date_out				//actual date going out
+								time_out                //actual time going out
+								ward_app_id				//id of warden who approved the hosteller for outing
+								sec_out_id				//id of security that allowed individual out
+
+MARKOUT/IN
+	REQUEST
+		METHOD POST
+			user_id,access_token,pass_id,mark
+	RESPONSE
+		MIME JSON
+			auth- success/not				//tells if the authentication with access_token was successful or not
+			pass_id				//unique id of the outing pass
+			img					//url of hosteler image
+			user_id				//id of the hosteler
+			name				//name of the hosteler

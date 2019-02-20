@@ -1,0 +1,209 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"in",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/Projects/Hostel App/Resource/API Desc/ERP req.txt",
+		"/E/Projects/CUA/web/index.php",
+		"/E/Projects/CUTE/Web/API/public/upload.php",
+		"/E/Projects/CUTE/Web/API/public/connect.php",
+		"/E/Projects/CUA/web/cxsn/cnct.php",
+		"/E/Projects/CUTE/Web/API/public/index.php",
+		"/C/Users/zingme/Downloads/New Text Document (1).txt",
+		"/C/Users/zingme/Downloads/New Text Document.txt",
+		"/C/Users/zingme/AppData/Local/Temp/Rar$DIa3824.37645/output001.txt",
+		"/C/Users/zingme/AppData/Local/Temp/Rar$DIa3824.37051/input001.txt",
+		"/E/Projects/CUA/res/CUPALM BETA API",
+		"/E/Projects/5050/web/cnxn/dncon.php",
+		"/E/Projects/5050/web/admin/addDailyWord.php",
+		"/E/Git/FastTrack-Chandigarh-University-Admissions-App/Android/Fasttrack4/app/src/main/res/values/strings.xml",
+		"/E/Projects/CUA/android/CUIMS/app/build.gradle",
+		"/E/Projects/CUA/android/CUIMS/settings.gradle",
+		"/E/Projects/Push UP/app/build.gradle",
+		"/C/Users/zingme/Downloads/notifications-project-85c69-firebase-adminsdk-busnv-89280bd7e7.json",
+		"/E/Projects/eayush/web/hlogin.php",
+		"/E/Projects/eayush/web/hospital/index.php",
+		"/E/Projects/CUA/android/CUIMS/build.gradle",
+		"/E/Projects/Push UP/settings.gradle",
+		"/E/Projects/Push UP/build.gradle",
+		"/C/Users/zingme/Desktop/cuadmissions/res/conxtion.php",
+		"/C/Users/zingme/Desktop/cuadmissions/connection.php",
+		"/C/Users/zingme/Desktop/u764646568_cuadm.sql",
+		"/C/Users/zingme/Desktop/u764646568_ft.sql",
+		"/C/Users/zingme/Desktop/New Microsoft Excel Worksheet.htm",
+		"/C/Users/zingme/Desktop/New Microsoft Excel Worksheet_files/sheet001.htm",
+		"/C/Users/zingme/Desktop/New Microsoft Excel Worksheet_files/filelist.xml",
+		"/E/Projects/5050/web2/getevent.php",
+		"/E/Projects/5050/web2/cnxn/dncon.php",
+		"/C/Users/zingme/Desktop/test.html",
+		"/E/Projects/5050/web/index.php",
+		"/C/Users/zingme/Downloads/facik.sql",
+		"/C/Users/zingme/Downloads/Minion.jpeg",
+		"/H/tyu/Downloads/wordgame.sql"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
